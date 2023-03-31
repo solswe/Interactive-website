@@ -1,0 +1,30 @@
+{
+  "name": "hw",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "init": "^0.1.2",
+    "mysql": "^2.18.1",
+    "next": "^13.2.4",
+    "node": "^19.2.0",
+    "nodemon": "^2.0.20",
+    "pug": "^3.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "A full-stack web application with multiple features such as log-in, weather widget, D-day counter, contact me, managing contact log",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solswe/interactive-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/solswe/interactive-website/issues"
+  },
+  "homepage": "https://github.com/solswe/interactive-website#readme"
+}

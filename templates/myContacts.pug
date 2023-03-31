@@ -1,0 +1,91 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    link(rel="stylesheet", href="resources/css/myStyle.css")
+    // Link for font
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap", rel="stylesheet")
+    // Javascript for contacts
+    script(async, defer, src="resources/js/myContacts.js")
+    title My Contacts
+  body
+    include theNav.pug
+    header#myContacts My Primary Contacts
+    .contactsLayout
+      .contactsColOne
+        table#contactsTable
+          tr
+            th(onmousedown="resort(0)") Name
+            th(onmousedown="resort(1)") Location
+            th(onmousedown="resort(2)") Contact Info
+            th(onmousedown="resort(3)") Email
+            th(onmousedown="resort(4)") Website
+          tr
+            td Netflix
+            td
+              .address(onmouseenter="mouseonNF()", onmouseleave="backToOrig()")
+                | 100 Winchester Circle
+                br
+                | Los Gatos, CA 95032
+                img.thumbnail(src="resources/images/netflix.jpg", alt="neflix", width="100")
+            td Subscription streaming service and production company
+            td
+              a(href="mailto:netflix@neflix.com") netflix@neflix.com
+            td
+              a(href="https://www.netflix.com/") Netflix Homepage
+          tr
+            td Riot Games
+            td
+              .address(onmouseenter="mouseonRG()", onmouseleave="backToOrig()")
+                | 12333 W Olympic Blvd
+                br
+                | Los Angeles, CA 90064
+                img.thumbnail(src="resources/images/riotGames.jpg", alt="riotGames", width="100")
+            td Video game company
+            td
+              a(href="mailto:riot@riotgames.com") riot@riotgames.com
+            td
+              a(href="https://www.riotgames.com/") Riot Games Homepage
+          tr
+            td Meta
+            td
+              .address(onmouseenter="mouseonMT()", onmouseleave="backToOrig()")
+                | Meta Platforms Inc 1 Hacker Way
+                br
+                | Menlo Park, CA 94025
+                img.thumbnail(src="resources/images/meta.jpg", alt="meta", width="100")
+            td Information technology company
+            td
+              a(href="mailto:meta@meta.com") meta@meta.com
+            td
+              a(href="https://about.facebook.com/") Meta Homepage
+          tr
+            td The Walt Disney Company
+            td
+              .address(onmouseenter="mouseonWD()", onmouseleave="backToOrig()")
+                | 500 South Buena Vista Street
+                br
+                | Burbank, CA 91521
+                img.thumbnail(src="resources/images/waltDisney.jpg", alt="waltDisney", width="100")
+            td Mass media and entertainment company
+            td
+              a(href="mailto:twdc.archives@disney.com") twdc.archives@disney.com
+            td
+              a(href="https://www.disney.com/") Disney Homepage
+          tr
+            td Morgan Stanley
+            td
+              .address(onmouseenter="mouseonMS()", onmouseleave="backToOrig()")
+                | 1585 Broadway Avenue
+                br
+                | New York, NY 10036
+                img.thumbnail(src="resources/images/morganStanley.jpg", alt="morganStanley", width="100")
+            td Investment management and financial services company
+            td
+              a(href="mailto:morganstanley@morganstanley.com") morganstanley@morganstanley.com
+            td
+              a(href="https://www.morganstanley.com/") Morgan Stanley Homepage
+      .contactsColTwo
+        img#contactsImg(src="resources/images/gophers-mascot.png", alt="goldy")

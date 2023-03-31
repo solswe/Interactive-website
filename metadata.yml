@@ -1,0 +1,12 @@
+---
+:id: 154098426
+:submitters:
+- :name: Sol Kim
+  :email: kim01540@umn.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2022-12-13 05:23:05.228350000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2022-12-12 21:23:05.228350000 Z
+:status: processed
+:score: 100.0

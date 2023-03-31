@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    link(rel="stylesheet", href="resources/css/myStyle.css")
+    // Link for font
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap", rel="stylesheet")
+    title Contact Log
+  body#contactMeBody
+    include theNav.pug
+    header#myContacts Messages
+    .contactLog
+      form(action="/contactLog", method="GET")
+        input(type="radio", name="category", value="All", required)
+        | All
+        input(type="radio", name="category", value="question", required)
+        | Question
+        input(type="radio", name="category", value="comment", required)
+        | Comment
+        input(type="radio", name="category", value="concern", required)
+        | Concern
+        | &nbsp;&nbsp;
+        input(type="submit", value="Filter")
+      br
+      h.contactsLayout
+      if numRows === 0
+        .formBox
+          p No message found!
+      else
+        table
+          tr
+            th From
+            th Title
+            th Category
+            th Message
+      
+          each data in contactData
+            tr
+              td
+                - link = data.link
+                if (link == null)
+                  = data.username
+                else 
+                  a(href= data.link)= data.username
+                br
+                a(href='mailto:' + data.email) #{data.email}  
+              td 
+                = data.title
+              td 
+                = data.category
+              td#message 
+                = data.message 

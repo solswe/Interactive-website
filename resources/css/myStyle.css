@@ -1,0 +1,255 @@
+body {
+    background-color: rgb(231, 224, 215);
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+}
+
+body h1 {
+    font-family: 'Bungee', cursive;
+    font-size: 12vw;
+    text-align: center;
+}
+
+div#tapbar {
+    width: 100%;
+}
+
+nav {
+    display:flex;
+    justify-content: space-evenly;
+    background-color: rgb(36, 39, 41);
+    padding: 8px;
+    margin: 0;
+}
+
+.navbar {
+    text-align: center;
+    padding: 9px;
+    text-decoration: none;
+    color: white;
+    border-radius: 3em;
+}
+
+.navbar:hover{
+    background-color: rgb(244, 233, 217);
+    color: black;
+}
+
+img#aboutmeImg {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.cards {
+    display: flex;
+    justify-content: space-around;
+    height: max-content;
+    margin-top: 70px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 90px;
+}
+
+div.card {
+	margin: 10px;
+	background-color:rgb(252, 246, 237);
+    display: inline-block; 
+    border-radius: 0.5em;           
+    width: 40%;                   
+    overflow:visible;
+    padding: 15px;
+}
+
+div.formBox {
+	background-color:rgb(249, 246, 240);
+    border-radius: 0.5em;           
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 80px;
+}
+
+div.widgetContainer {
+    max-width: 1920px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: min-content;
+}
+
+div.widgetCards {
+    display: flex;
+    justify-content: space-around;
+    height: max-content;
+    padding: 10px;
+}
+
+div.widgetCard {
+	margin: 10px;
+    display: inline-block; 
+    padding: 15px;
+    width: 50%;
+}
+
+.card header {
+    font-size: 30px;
+    font-weight:700;
+    text-align: center;
+}
+
+.card p {
+    text-align: left;
+}
+
+.card i {
+    color: rgb(17, 104, 17);
+}
+
+.card b {
+    color: white;
+    background-color: rgb(17, 104, 17);
+}
+
+header#myContacts {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin: 50px;
+}
+
+.contactLog {
+    display: block;
+    width: 80%;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 50px;
+}
+
+header#myWidgets {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: left;
+    margin: 50px;
+}
+
+.widgetHeader {
+    font-size: 20px;
+    font-weight:600;
+    text-align: left;
+}
+
+div.contactsLayout {
+    display: inline-flex;
+    align-items: center;
+    margin: 30px;
+}
+
+table {
+    width: 100%;
+    word-break: break-all;
+    overflow: scroll;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: left;
+}
+
+td#message {
+    white-space: pre;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(240, 166, 28);
+}
+
+th, tr:nth-child(odd) {
+    background-color: rgb(250, 242, 94);
+}
+
+.address {
+    display: inline-block;
+}
+
+.address .thumbnail{
+    display: none;
+}
+
+.address:hover .thumbnail{
+    display: block;
+    visibility: visible;
+}
+
+.contactsColOne {
+    width: 70%;
+    padding: 20px;
+}
+
+.contactsColTwo {
+    width: 30%;
+    padding: 20px;
+}
+
+img#contactsImg {
+    width: 100%;
+    height: auto;
+}
+
+iframe {
+    border: 0px;
+}
+
+header#contactMeheader {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 40pt;
+    text-align: center;
+    padding: 60pt;
+}
+
+div.formBox {
+    margin: auto;
+    font-size: 20px;
+}
+
+div.confirmMessageBox {
+	background-color:rgb(233, 170, 44);
+    border-radius: 0.5em;           
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+    font-size: 20px;
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    font-style: bold;
+}
+
+div#formCards {
+    display: flex;
+}
+
+div#categoryBox {
+    width: 50%;
+    margin: auto;
+}
+
+div#concernMessage {    
+    width: 40%;
+    margin: auto;
+    padding: 5px;
+    border: 3px solid rgb(179, 18, 18);
+}

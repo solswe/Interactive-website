@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    link(rel="stylesheet", href="resources/css/myStyle.css", type="text/css")
+    // Link for font
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap", rel="stylesheet")
+    title About Me
+  body
+    include theNav.pug
+    h1 Sol Kim
+    img#aboutmeImg(src="resources/images/mountain1.jpeg", alt="mountain", width="800")
+    .cards
+      .card
+        header About me!
+        p My name is Sol. I&apos;m studying 
+          b Computer Science
+          | at the University of Minnesota.
+        p
+          | I like to do cycling, mountain climbing, watching movies and tv shows in my free time.
+          | I recently watched the Thailand movie
+          i Friend Zone(2019)
+          | and definitely recommend it!
+        p A picture above is taken by me this summer. It&apos;s 
+          i Seoraksan(Seorak-mountain)
+          | in South Korea.
+      .card
+        header Favorite movies and series
+        ul
+          li Moulin Rouge! (2001)
+          li Begin Again (2013)
+          li Brooklyn Nine-Nine
+          li The Big Bang Theory
+          li The Marvelous Mrs. Maisel
+          li Modern Family
+          li Why Women Kill

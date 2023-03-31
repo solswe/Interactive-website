@@ -1,0 +1,62 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    link(rel="stylesheet", href="resources/css/myStyle.css")
+    // Link for font
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap", rel="stylesheet")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Graduate&display=swap", rel="stylesheet")
+    // Javascript for contactMe
+    script(async, defer, src="resources/js/contactMe.js")
+    title Contact Me
+  body#contactMeBody
+    include theNav.pug
+    if (isSubmitted === 1)
+      .confirmMessageBox Your message has been received!
+    else if (isSubmitted === 2)
+      .confirmMessageBox Fail to receive your message. Try again!
+
+    header#contactMeheader Contact Me!
+    .formBox
+      form(action="/contactMe", method="POST")
+        label
+          | Title :
+          input#postTitle(type="text", name="postTitle", required)
+          br
+        label
+          | Email :
+          input#email(type="email", name="email", required)
+          br
+        label
+          | Username :
+          input#username(type="text", name="username", required)
+          br
+        label
+          | Link :
+          input#link(type="url", name="link")
+          br
+        #formCards
+          #categoryBox
+            fieldset
+              legend Category :
+              input.notconcern(type="radio", name="category", value="question", required)
+              | Question
+              br
+              input.notconcern(type="radio", name="category", value="comment", required)
+              | Comment
+              br
+              input#concern(type="radio", name="category", value="concern", required)
+              | Concern
+              br
+          #concernMessage
+            | In order to best address your concern, please make sure to list the specific way in which I have wronged you.
+        label
+          | Message :
+          textarea#message(name="message", rows="5", cols="50", required)
+          br
+        br
+        input(type="submit", value="Submit")

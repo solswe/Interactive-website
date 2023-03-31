@@ -1,0 +1,29 @@
+#weatherContainer {
+    width: 34em;
+    background: #ffffff;
+    padding: 1.25em;
+    margin: 5.5em auto;
+    border-radius: 0.4em;
+    height: auto;
+    border: 2px solid gray;
+}
+
+#weatherContainer #weatherHeader {
+    text-align: center;
+    background-color: #FEFFED;
+    border-radius: 0.25em;
+    margin: -39px -20px 10px -20px;
+}
+
+#weatherContainer h2{
+    padding-top: 10px;
+}
+
+#weatherContainer #weatherContent {
+    margin-left: 57px;
+    margin-top: 40px;
+}
+
+#weatherContainer input {
+    width:5em;
+}

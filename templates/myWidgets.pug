@@ -1,0 +1,102 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    link(rel="stylesheet", href="resources/css/myStyle.css")
+    // Link for font
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap", rel="stylesheet")
+    // CSS
+    link(rel="stylesheet", href="resources/css/passwordWidget.css")
+    link(rel="stylesheet", href="resources/css/timeWidget.css")
+    link(rel="stylesheet", href="resources/css/clickWidget.css")
+    link(rel="stylesheet", href="resources/css/weatherWidget.css")
+    title My Widgets
+    // Javascript for password widget
+    script(async, defer, src="resources/js/passwordWidget.js")
+    // Javascript for time widget
+    script(async, defer, src="resources/js/timeWidget.js")
+    // Javascript for click widget
+    script(async, defer, src="resources/js/clickWidget.js")
+    // Javascript for weather widget
+    script(async, defer, src="resources/js/weatherWidget.js")
+  body
+    include theNav.pug
+    header#myWidgets My Widgets
+    .widgetContainer
+      .widgetCards
+        #youtube.widgetCard
+          header.widgetHeader Interesting video from MoMA
+          br
+          iframe(width="560", height="315", src="https://www.youtube.com/embed/rGZYfSzvPvs", title="YouTube video player", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+        #tweets.widgetCard
+          header.widgetHeader Tweets from MoMA
+          br
+          blockquote.twitter-tweet
+            p(lang="en", dir="ltr") “The viewer...should enter my work through their own eyes, and their own lives.” — 
+              a(href="https://twitter.com/hashtag/WolfgangTillmans?src=hash&amp;ref_src=twsrc%5Etfw") #WolfgangTillmans
+              br
+              br
+              | See the full breadth and depth of Tillmans’s career in
+              a(href="https://twitter.com/hashtag/ToLookWithoutFear?src=hash&amp;ref_src=twsrc%5Etfw") #ToLookWithoutFear
+              | , now open →
+              a(href="https://t.co/qERr14D7F0") https://t.co/qERr14D7F0
+              br
+              br
+              | —
+              br
+              | 📸 Daniel Arnold for The New York Times
+              a(href="https://t.co/YVQQ16ZGS5") pic.twitter.com/YVQQ16ZGS5
+            | &amp;mdash; MoMA The Museum of Modern Art (@MuseumModernArt)
+            a(href="https://twitter.com/MuseumModernArt/status/1569705826113449987?ref_src=twsrc%5Etfw") September 13, 2022
+          script(async, src="https://platform.twitter.com/widgets.js")
+      .widgetCards
+        .widgetCard
+          #passwordContainer
+            #header
+              h2 Password Strength Checking with JS
+              hr
+            #content
+              form#register(name="register")
+                label(for="password") Password :
+                input#password(name="password", type="password", placeholder="Type Your Password here")
+                | &amp;nbsp;&amp;nbsp;
+                span#pwdresult
+        .widgetCard
+          #timeWidgetContainer
+            #timeHeader
+              h2 Time Until the end of the semester
+              hr
+            p#timeresult
+      .widgetCards
+        .widgetCard
+          #weatherContainer
+            #weatherHeader
+              h2 weather
+              hr
+            #weatherContent
+              p#weatherStatus
+              div
+                span Coordinates:
+                input#latitude-input(type="text", placeholder="Latitude")
+                input#longitude-input(type="text", placeholder="Longitude")
+              div
+                button#find-me(type="button") Auto-Find me!
+                button#get-weather-btn(type="button") Find The Weather!
+              #weatherOutput
+                p#temp-display
+                p#cloud-cover-display
+                p#sunrise-display
+                p#sunset-display
+              // Interesting fact. We're legally required to put this here.
+              a(href="https://open-meteo.com/") Weather data by Open-Meteo.com
+              a(href="https://sunrise-sunset.org/") Sunrise and sunset data by sunrise-sunset.org
+        .widgetCard
+          #clickWidgetContainer
+            #clickHeader
+              h2 Click Toy
+              hr
+              h
+                button#clickButton(type="button") 
+                  p#clickCount
