@@ -6,7 +6,7 @@ const path = require("path");
 var db = require("./db")
 
 const app = express();
-const PORT = 3006
+const PORT = 9090
 
 
 app.use(express.static(path.join(__dirname, './')))
